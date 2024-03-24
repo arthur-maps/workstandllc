@@ -13,19 +13,37 @@
 </head>
 <body class="font-sans bg-gray-100">
 
-  <!-- Navigation -->
-  <nav class="bg-gray-900 text-white py-4 px-4 fixed w-full top-0 z-10">
-    <div class="max-w-7xl mx-auto flex justify-between items-center">
-      <div>
-        <a href="#" class="text-lg font-semibold">Art and Music, GNV</a>
-      </div>
-      <div class="hidden md:block">
-        <a href="#" class="mx-4">Home</a>
-        <a href="#about" class="mx-4">About Us</a>
-        <a href="#contact" class="mx-4">Contact</a>
-      </div>
+ <!-- Navigation -->
+<nav class="bg-gray-900 text-white py-4 px-4 fixed w-full top-0 z-10">
+  <div class="max-w-7xl mx-auto flex justify-between items-center">
+    <div>
+      <a href="#" class="text-lg font-semibold">Company Name</a>
     </div>
-  </nav>
+    <!-- Hamburger Menu -->
+    <div class="block md:hidden">
+      <button id="mobile-menu-toggle" class="text-white focus:outline-none">
+        <svg class="h-6 w-6" viewBox="0 0 24 24">
+          <path fill="currentColor" d="M4 6h16M4 12h16m-7 6h7"></path>
+        </svg>
+      </button>
+    </div>
+    <!-- Navigation Links -->
+    <div class="hidden md:block">
+      <a href="#" class="mx-4">Home</a>
+      <a href="#about" class="mx-4">About Us</a>
+      <a href="#contact" class="mx-4">Contact</a>
+    </div>
+  </div>
+</nav>
+<!-- Mobile Menu (Hidden by default) -->
+<div id="mobile-menu" class="bg-gray-900 text-white py-4 px-4 fixed w-full top-16 z-10 hidden">
+  <div class="max-w-7xl mx-auto">
+    <a href="#" class="block py-2">Home</a>
+    <a href="#about" class="block py-2">About Us</a>
+    <a href="#contact" class="block py-2">Contact</a>
+  </div>
+</div>
+
 
   <!-- Hero Section -->
   <section id="home" class="bg-blue-900 text-white py-20 px-4 mt-16">
@@ -80,6 +98,17 @@ Goal: To transform the church space into a dynamic center for music, visual arts
       </p>
     </div>
   </section>
+
+
+  <script>
+  document.addEventListener('DOMContentLoaded', function () {
+    // Toggle mobile menu visibility
+    document.getElementById('mobile-menu-toggle').addEventListener('click', function () {
+      document.getElementById('mobile-menu').classList.toggle('hidden');
+    });
+  });
+</script>
+
 
 </body>
 </html>
