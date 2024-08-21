@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Company Website</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Custom CSS -->
+  <style>
+    body {
+      scroll-behavior: smooth;
+    }
+    section {
+      padding: 60px 0;
+    }
+    #hero {
+      background: url('https://via.placeholder.com/1920x1080') no-repeat center center/cover;
+      color: white;
+      text-align: center;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+    .navbar-nav .nav-link {
+      margin-right: 15px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="#">Company Name</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="#hero">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#mission">Mission</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#details">Details</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="hero">
+    <div class="container">
+      <h1 class="display-3">Welcome to Our Company</h1>
+      <p class="lead">Providing exceptional service and solutions.</p>
+      <a href="#mission" class="btn btn-primary btn-lg mt-3">Learn More</a>
+    </div>
+  </section>
+
+  <!-- Mission Section -->
+  <section id="mission" class="bg-light">
+    <div class="container">
+      <h2 class="text-center">Our Mission</h2>
+      <p class="lead text-center">To deliver innovative and sustainable solutions that empower businesses and communities to thrive.</p>
+      <div class="row">
+        <div class="col-md-6">
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin gravida nisi sit amet metus volutpat, non aliquet sem tincidunt. Vivamus et risus at dui sodales suscipit.</p>
+        </div>
+        <div class="col-md-6">
+          <p>Nulla facilisi. Donec vel dapibus orci. Etiam vel orci eget mi facilisis dictum. Sed id aliquam eros, in varius tortor. Nulla facilisi. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Details Section 1 -->
+  <section id="details" class="bg-white">
+    <div class="container">
+      <h2 class="text-center">Our Expertise</h2>
+      <p class="lead text-center">Leveraging decades of experience to drive success in every project.</p>
+      <div class="row">
+        <div class="col-md-4">
+          <h3>Detail 1</h3>
+          <p>Our team excels in delivering top-notch solutions that exceed expectations. We focus on quality, reliability, and innovation in all our endeavors.</p>
+        </div>
+        <div class="col-md-4">
+          <h3>Detail 2</h3>
+          <p>We bring together the best practices from various industries to create unique and effective strategies tailored to each client's needs.</p>
+        </div>
+        <div class="col-md-4">
+          <h3>Detail 3</h3>
+          <p>Our commitment to continuous improvement ensures that we stay ahead of the curve, delivering the latest advancements to our clients.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Details Section 2 -->
+  <section id="details-2" class="bg-light">
+    <div class="container">
+      <h2 class="text-center">Our Values</h2>
+      <p class="lead text-center">Guided by integrity, innovation, and collaboration.</p>
+      <div class="row">
+        <div class="col-md-6">
+          <h3>Integrity</h3>
+          <p>We believe in doing the right thing, always. Our commitment to ethical practices underpins all our actions and decisions.</p>
+        </div>
+        <div class="col-md-6">
+          <h3>Collaboration</h3>
+          <p>Our success is built on strong partnerships with our clients, employees, and communities. We work together to achieve our goals.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Bootstrap JS and dependencies -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.min.js"></script>
+</body>
+</html>
