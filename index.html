@@ -183,7 +183,7 @@
   <label for="booking4"> I want to teach art, music, or something else.</label><br>
             </div>
     
- <button type="submit" onclick="clear_form();">Send</button>
+ <button type="submit">Send</button>
 
 </form>
 </div>
@@ -193,9 +193,6 @@
   <!-- Bootstrap JS and dependencies -->
   <script type="text/javascript">
 
-          function clear_form() {
-document.myform.reset(); 
-}
     
 window.addEventListener("load", function() {
   const form = document.getElementById('myform');
@@ -210,8 +207,8 @@ window.addEventListener("load", function() {
     .then(() => {
       alert("Success!");
     })
+    document.myform.reset();
   });
-});
 
 
 
