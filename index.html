@@ -183,8 +183,8 @@
   <label for="booking4"> I want to teach art, music, or something else.</label><br>
             </div>
     
-  <!--- <button type="submit">Send</button> --->
-    <input type="button" value="Send" onclick="submit_form();" />
+ <button type="submit" onclick="clear_form();">Send</button>
+
 </form>
 </div>
 </section>
@@ -193,14 +193,13 @@
   <!-- Bootstrap JS and dependencies -->
   <script type="text/javascript">
 
-          function submit_form() {
-document.myform.submit();
+          function clear_form() {
 document.myform.reset(); 
 }
     
 window.addEventListener("load", function() {
   const form = document.getElementById('myform');
-  form.addEventListener("submit_form()", function(e) {
+  form.addEventListener("submit", function(e) {
     e.preventDefault();
     const data = new FormData(form);
     const action = e.target.action;
