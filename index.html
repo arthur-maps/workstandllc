@@ -158,10 +158,9 @@
 <div class="container">
 <h2 class="text-center">Contact Us</h2>
   <form 
-  id='my-form'
+  id='myform'
   method="POST" 
   action="https://script.google.com/macros/s/AKfycbwUJO3Ep2KjvP_WJns5kLeDHxOA03zzE9tv9owddZN_mWSb11Cy82apRzhTpFm3TEM/exec"
-  onsubmit="this.submit(); this.reset(); return false;"
 >
   
         <div><p><strong>Name</strong></p>
@@ -183,15 +182,21 @@
   <input type="checkbox" id="booking4" name="Teach" value="teach">
   <label for="booking4"> I want to teach art, music, or something else.</label><br>
             </div>
-  <button type="submit">Send</button>
+    
+  <!--- <button type="submit">Send</button> --->
+    <input type="button" value="Send" onclick="submit_form();" />
 </form>
 </div>
 </section>
-  
+
+      function submit_form() {
+document.myform.submit();
+document.myform.reset(); 
+}
   <!-- Bootstrap JS and dependencies -->
   <script type="text/javascript">
 window.addEventListener("load", function() {
-  const form = document.getElementById('my-form');
+  const form = document.getElementById('myform');
   form.addEventListener("submit", function(e) {
     e.preventDefault();
     const data = new FormData(form);
@@ -203,10 +208,10 @@ window.addEventListener("load", function() {
     .then(() => {
       alert("Success!");
     })
-    document.getElementById("booking1").value = "";
-    document.getElementById("booking2").value = "";
   });
 });
+
+
 
 </script>
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
