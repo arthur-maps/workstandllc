@@ -197,7 +197,7 @@ document.myform.reset();
   <script type="text/javascript">
 window.addEventListener("load", function() {
   const form = document.getElementById('myform');
-  form.addEventListener("submit", function(e) {
+  form.addEventListener("submit_form()", function(e) {
     e.preventDefault();
     const data = new FormData(form);
     const action = e.target.action;
