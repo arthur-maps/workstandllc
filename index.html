@@ -161,6 +161,7 @@
   id='my-form'
   method="POST" 
   action="https://script.google.com/macros/s/AKfycbwUJO3Ep2KjvP_WJns5kLeDHxOA03zzE9tv9owddZN_mWSb11Cy82apRzhTpFm3TEM/exec"
+  onsubmit="this.submit(); this.reset(); return false;"
 >
   
         <div><p><strong>Name</strong></p>
@@ -206,13 +207,7 @@ window.addEventListener("load", function() {
     document.getElementById("booking2").value = "";
   });
 });
-    function logReset(event) {
-  log.textContent = `Form reset! Timestamp: ${event.timeStamp}`;
-}
 
-const form = document.getElementById("my-form");
-const log = document.getElementById("log");
-form.addEventListener("submit", logReset);
 </script>
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
