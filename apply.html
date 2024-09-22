@@ -113,12 +113,12 @@
   <label for="booking1"> Music Performance</label><br>
     <input type="checkbox" name="type_Gallery" onclick="var input = document.getElementById('gallery'); if(this.checked){ input.disabled = false; input.focus();}else{input.disabled=true;}" /> Art Gallery Show
      <label for="gallery">Choose desirec duration:</label>
-  <select id="gallery" name="type_Gallery_Duration">
-    <option value="volvo">1 day</option>
-    <option value="saab">1 Weekend</option>
-    <option value="fiat">1 month</option>
-    <option value="audi">Longer</option>
-  </select>
+  <select id="gallery" name="type_Gallery_Duration" disabled="disabled">
+    <option value="day">1 day</option>
+    <option value="weekend">1 Weekend</option>
+    <option value="month">1 month</option>
+    <option value="longer">Longer</option>
+  </select><br>
       <!--      <input id="gallery" name="type_Gallery_Duration" value="Desired duration" disabled="disabled" /><br>-->
     <input type="checkbox" name="type_Installation" onclick="var input = document.getElementById('installation'); if(this.checked){ input.disabled = false; input.focus();}else{input.disabled=true;}" /> Art Installation
    <input id="installation" name="type_Installation_Duration" value="Desired duration" disabled="disabled" /><br>
