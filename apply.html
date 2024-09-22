@@ -104,13 +104,13 @@
     </div>
 
     <div><p><strong>What date do you plan to start your event?</strong></p>
- <label for="start">Event date:</label>
+ <label for="eventdate">Event date:</label>
           <input type="date" id="eventdate" name="EventDate" value="yyyy-mm-dd" min="2024-10-01" max="2025-12-31" />
       
             <div><p><strong>What type of event do you want to hold?</strong></p>
  
-  <input type="checkbox" class="radio" id="booking1" name="type[1][]" value="concert">
-  <label for="booking1"> Music Performance</label><br>
+  <input type="checkbox" class="radio" id="music" name="type[1][]" value="concert">
+  <label for="music"> Music Performance</label><br>
               
     <input type="checkbox" class="radio" name="type[1][]" value="yes" onclick="var input = document.getElementById('gallery'); if(this.checked){ input.disabled = false; input.focus();}else{input.disabled=true;}" /> Art Gallery Show
      <br><label for="gallery">Choose desired duration:</label>
@@ -191,7 +191,7 @@ window.addEventListener("load", function() {
 
 // the selector will match all input controls of type :checkbox
 // and attach a click event handler 
-$("input:checkbox").on('click', function() {
+$("input:checkbox.radio").on('click', function() {
   // in the handler, 'this' refers to the box clicked on
   var $box = $(this);
   if ($box.is(":checked")) {
