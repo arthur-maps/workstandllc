@@ -103,15 +103,16 @@
   <input name="Email" type="email" placeholder="Email" required>
     </div>
 
-    <div><p><strong>When do you plan to hold your event?</strong></p>
+    <div><p><strong>What date do you plan to start your event?</strong></p>
  <label for="start">Event date:</label>
           <input type="date" id="eventdate" name="EventDate" value="yyyy-mm-dd" min="2024-10-01" max="2025-12-31" />
       
             <div><p><strong>What type of event do you want to hold?</strong></p>
  
-  <input type="checkbox" id="booking1" name="type_Concert" value="concert">
+  <input type="radio" id="booking1" name="type_Concert" value="concert">
   <label for="booking1"> Music Performance</label><br>
-    <input type="checkbox" name="type_Gallery" onclick="var input = document.getElementById('gallery'); if(this.checked){ input.disabled = false; input.focus();}else{input.disabled=true;}" /> Art Gallery Show
+              
+    <input type="radio" name="type_Gallery" value="yes" onclick="var input = document.getElementById('gallery'); if(this.checked){ input.disabled = false; input.focus();}else{input.disabled=true;}" /> Art Gallery Show
      <br><label for="gallery">Choose desired duration:</label>
   <select id="gallery" name="type_Gallery_Duration" disabled="disabled">
     <option value="day">1 day</option>
@@ -119,14 +120,32 @@
     <option value="month">1 month</option>
     <option value="longer">Longer</option>
   </select><br>
-      <!--      <input id="gallery" name="type_Gallery_Duration" value="Desired duration" disabled="disabled" /><br>-->
-    <input type="checkbox" name="type_Installation" onclick="var input = document.getElementById('installation'); if(this.checked){ input.disabled = false; input.focus();}else{input.disabled=true;}" /> Art Installation
-   <input id="installation" name="type_Installation_Duration" value="Desired duration" disabled="disabled" /><br>
-  <input type="checkbox" id="booking4" name="Event" value="event">
-  <label for="booking4"> Class or workshop. </label><br>
-  <input type="checkbox" onclick="var input = document.getElementById('otherneed'); if(this.checked){ input.disabled = false; input.focus();}else{input.disabled=true;}" /> Other...
-<input id="otherneed" name="Other" value="other" disabled="disabled" />
-            </div>
+              
+    <input type="radio" name="type_installation" value="yes" onclick="var input = document.getElementById('installation'); if(this.checked){ input.disabled = false; input.focus();}else{input.disabled=true;}" /> Art Installation
+     <br><label for="installation">Choose desired duration:</label>
+  <select id="installation" name="type_installation_Duration" disabled="disabled">
+    <option value="day">1 day</option>
+    <option value="weekend">1 Weekend</option>
+    <option value="month">1 month</option>
+    <option value="longer">Longer</option>
+  </select><br>
+              
+    <input type="radio" name="type_workshop" value="yes" onclick="var input = document.getElementById('workshop'); if(this.checked){ input.disabled = false; input.focus();}else{input.disabled=true;}" /> Class or Workshop
+     <br><label for="workshop">Choose desired duration:</label>
+  <select id="workshop" name="type_workshop_Duration" disabled="disabled">
+    <option value="day">1 day</option>
+    <option value="weekend">1 Weekend</option>
+    <option value="month">1 month</option>
+    <option value="longer">Longer</option>
+  </select><br>
+              
+   <input type="radio" name="type_social" value="yes" onclick="var input = document.getElementById('social'); if(this.checked){ input.disabled = false; input.focus();}else{input.disabled=true;}" /> Social Gathering (music jams, film nights etc)
+     <br><label for="social">Choose desired frequency:</label>
+  <select id="social" name="type_social_frequency" disabled="disabled">
+    <option value="once">Once</option>
+    <option value="weekly">Weekly</option>
+    <option value="monthly">Monthly</option>
+  </select><br>
       
         <div><p><strong>What staff services do you need to support your event?</strong></p>
  
