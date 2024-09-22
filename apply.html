@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nightjar Studios</title>
+  <!-- Bootstrap CSS -->
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <!-- Custom CSS -->
+  <style>
+    body {
+      scroll-behavior: smooth;
+    }
+    section {
+      padding: 60px 0;
+    }
+    #hero {
+      <!---background: url('https://raw.githubusercontent.com/arthur-maps/workstandllc/main/herobackground.png') no-repeat center center/cover;--->
+      color: white;
+      background: #d6c0a8;
+      text-align: center;
+      height: 60vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      font-weight: 700;
+      line-height: 3em;
+    }
+
+    #logo{
+      font-family: "Edu AU VIC WA NT Hand", cursive;
+    }
+
+
+  
+    .navbar-nav .nav-link {
+      margin-right: 15px;
+    }
+  </style>
+
+  <!--- font stuff --->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Hand:wght@400..700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="#">Nightjar</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Community Guidelines</a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Book With Us
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="#">Music Practice</a>
+           <a class="dropdown-item" href="#">Gallery</a>
+          <a class="dropdown-item" href="#">Space Rental</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" style="background: #9b9ce4" href="#">Join the Art Studios</a>
+        </div>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Who We Are</a>
+      </li>
+    </ul>
+    <form class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    </form>
+  </div>
+</nav>
+
+
+  <!-- Mission Section -->
+  <section id="mission" class="bg-light">
+    <div class="container">
+      <h2 class="text-center">Our Mission</h2>
+      <p class="lead text-center">To empower the excellent people of Gainesville, Florida to connect, create, and grow.</p>
+      <div class="row">
+        <div class="col-md-6">
+          <p>  Nightjar aims to support and improve the accessibilty of artistic expression.</p>
+        </div>
+        <div class="col-md-6">
+          <p>Our goal is to transform the space at 1628 NW 6th st to a dynamic center for visual arts, music, and education, and to provide inclusive opportunities for the community to engage, learn, and promote their own work. 
+        </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+<section style="background: #9b9ce4">
+<div class="container">
+<h2 class="text-center">Contact Us</h2>
+  <form 
+  id='myform'
+  method="POST" 
+  action="https://script.google.com/macros/s/AKfycbwUJO3Ep2KjvP_WJns5kLeDHxOA03zzE9tv9owddZN_mWSb11Cy82apRzhTpFm3TEM/exec"
+>
+  
+        <div><p><strong>Name</strong></p>
+  <input name="Name" type="text" placeholder="Name" required>
+    </div>
+    
+    <div><p><strong>E-mail</strong></p>
+  <input name="Email" type="email" placeholder="Email" required>
+    </div>
+
+        <div><p><strong>What Services Do you Need To Support?</strong></p>
+  
+  <input type="checkbox" id="booking1" name="Art" value="art">
+  <label for="booking1"> I want to join the open, dry media studios.</label><br>
+  <input type="checkbox" id="booking2" name="Music" value="music">
+  <label for="booking2"> I want to book music practice time.</label><br>
+  <input type="checkbox" id="booking3" name="Event" value="teach">
+  <label for="booking3"> I want to teach art, music, or something else. </label><br>
+  <input type="checkbox" id="booking4" name="Teach" value="event">
+  <label for="booking4"> I want to book for a project or gallery event. </label><br>
+  <input type="checkbox" onclick="var input = document.getElementById('otherneed'); if(this.checked){ input.disabled = false; input.focus();}else{input.disabled=true;}" />Other...
+<input id="name2" name="otherneed" disabled="disabled" />
+            </div>
+    
+<button type="submit">Send</button>
+
+</form>
+</div>
+</section>
+
+
+  <!-- Bootstrap JS and dependencies -->
+  <script type="text/javascript">
+ 
+    
+window.addEventListener("load", function() {
+  const form = document.getElementById('myform');
+  form.addEventListener("submit", function(e) {
+    e.preventDefault();
+    const data = new FormData(form);
+    const action = e.target.action;
+    fetch(action, {
+      method: 'POST',
+      body: data,
+    })
+    .then(() => {
+      alert("Success!");
+    })
+    document.getElementById("myform").reset();
+  });
+});
+
+    
+
+
+</script>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>
