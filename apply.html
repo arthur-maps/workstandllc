@@ -38,6 +38,11 @@
     .navbar-nav .nav-link {
       margin-right: 15px;
     }
+
+    .formlabel {
+
+      padding: 20px;
+    } 
   </style>
 
   <!--- font stuff --->
@@ -95,7 +100,7 @@
   action="https://script.google.com/macros/s/AKfycbzIlg3FUIq9Q1MJ-DwB32fk8qiXyDgQ9SXJLRgZ_1d6odgKlhlMF3NOvv3K8OoNJ_9uTA/exec"
 >
   
-        <div><p><strong>Name</strong></p>
+        <div class="formlabel"><p><strong>Name</strong></p>
   <input name="Name" type="text" placeholder="Name" required>
     </div>
     
@@ -124,8 +129,9 @@
         <input type="radio" id="social" name="type" value="social">
   <label for="social"> Social Gathering</label><br>
 
+              <!--
                 <input type="radio"  name="type" onclick="var input = document.getElementById('othertype'); if(this.checked){ input.disabled = false; input.focus();}else{input.disabled=true;}" /> Other Type...
-<input id="othertype" name="Other" value="other" disabled="disabled" />
+<input id="othertype" name="Other" value="other" disabled="disabled" /> -->
 
 
           <div><p><strong>What is the desired duration?</strong></p>
