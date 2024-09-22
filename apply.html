@@ -109,36 +109,33 @@
       
             <div><p><strong>What type of event do you want to hold?</strong></p>
  
-  <input type="checkbox" class="radio" id="music" name="type[1][]" value="concert">
+  <input type="radio" id="music" name="type" value="concert">
   <label for="music"> Music Performance</label><br>
+
+  <input type="radio" id="gallery" name="type" value="galleryshow">
+  <label for="gallery"> Art Gallery Show</label><br>
+
+    <input type="radio" id="installation" name="type" value="installation">
+  <label for="installation"> Art Installation</label><br>
+
+      <input type="radio" id="workshop" name="type" value="workshop">
+  <label for="workshop"> Class or Workshop</label><br>
+
+        <input type="radio" id="social" name="type" value="social">
+  <label for="social"> Social Gathering</label><br>
+
+
+          <div><p><strong>What is the desired duration?</strong></p>
               
-    <input type="checkbox" class="radio" name="type[1][]" value="yes" onclick="var input = document.getElementById('gallery'); if(this.checked){ input.disabled = false; input.focus();}else{input.disabled=true;}" /> Art Gallery Show
-     <br><label for="gallery">Choose desired duration:</label>
-  <select id="gallery" name="type_Gallery_Duration" disabled="disabled">
+     <br><label for="duration">Choose desired duration:</label>
+  <select id="duration" name="duration">
     <option value="day">1 day</option>
     <option value="weekend">1 Weekend</option>
     <option value="month">1 month</option>
-    <option value="longer">Longer</option>
+    <option value="month">Recurring</option>
   </select><br>
-              
-    <input type="checkbox" class="radio" name="type[1][]" value="yes" onclick="var input = document.getElementById('installation'); if(this.checked){ input.disabled = false; input.focus();}else{input.disabled=true;}" /> Art Installation
-     <br><label for="installation">Choose desired duration:</label>
-  <select id="installation" name="type_installation_Duration" disabled="disabled">
-    <option value="day">1 day</option>
-    <option value="weekend">1 Weekend</option>
-    <option value="month">1 month</option>
-    <option value="longer">Longer</option>
-  </select><br>
-              
-    <input type="checkbox" class="radio" name="type[1][]" value="yes" onclick="var input = document.getElementById('workshop'); if(this.checked){ input.disabled = false; input.focus();}else{input.disabled=true;}" /> Class or Workshop
-     <br><label for="workshop">Choose desired duration:</label>
-  <select id="workshop" name="type_workshop_Duration" disabled="disabled">
-    <option value="day">1 day</option>
-    <option value="weekend">1 Weekend</option>
-    <option value="month">1 month</option>
-    <option value="longer">Longer</option>
-  </select><br>
-              
+
+              <!--
    <input type="checkbox" class="radio" name="type[1][]" value="yes" onclick="var input = document.getElementById('social'); if(this.checked){ input.disabled = false; input.focus();}else{input.disabled=true;}" /> Social Gathering (music jams, film nights etc)
      <br><label for="social">Choose desired frequency:</label>
   <select id="social" name="type_social_frequency" disabled="disabled">
@@ -146,6 +143,8 @@
     <option value="weekly">Weekly</option>
     <option value="monthly">Monthly</option>
   </select><br>
+
+              -->
 
         <div><p><strong>What staff services do you need to support your event?</strong></p>
  
