@@ -108,11 +108,11 @@
   <input name="Email" type="email" placeholder="Email" required>
     </div>
 
-    <div class="formlabel"><p><strong>What date do you plan to start your event?</strong></p>
+    <div class="formlabel"><p><strong>What date do you plan to start your event?</strong></p></div>
  <label for="eventdate">Event date:</label>
           <input type="date" id="eventdate" name="EventDate" value="yyyy-mm-dd" min="2024-10-01" max="2025-12-31" />
       
-            <div><p><strong>What type of event do you want to hold?</strong></p>
+            <div class="formlabel"><p><strong>What type of event do you want to hold?</strong></p></div>
  
   <input type="radio" id="music" name="type" value="concert">
   <label for="music"> Music Performance</label><br>
@@ -134,7 +134,7 @@
 <input id="othertype" name="Other" value="other" disabled="disabled" /> -->
 
 
-          <div class="formlabel"><p><strong>What is the desired duration?</strong></p>
+          <div class="formlabel"><p><strong>What is the desired duration?</strong></p></div>
           <label for="duration">Choose desired duration:</label>
   <select id="duration" name="duration">
     <option value="day">1 day</option>
@@ -154,7 +154,7 @@
 
               -->
 
-        <div class="formlabel"><p><strong>What staff services do you need to support your event?</strong></p>
+        <div class="formlabel"><p><strong>What staff services do you need to support your event?</strong></p></div>
  
   <input type="checkbox" id="need1" name="Sound" value="sound">
   <label for="need1"> Sound (Someone to run sound check, manage levels. REQUIRED in order to use house equipment.)</label><br>
@@ -166,7 +166,7 @@
   <label for="need4"> Clean up (Someone to handle cleaning and turnover of the space.) </label><br>
   <input type="checkbox" onclick="var input = document.getElementById('otherneed'); if(this.checked){ input.disabled = false; input.focus();}else{input.disabled=true;}" /> Other Need...
 <input id="otherneed" name="Other" value="other" disabled="disabled" />
-            </div>
+
     
 <button type="submit">Send</button>
 
