@@ -109,10 +109,10 @@
       
             <div><p><strong>What type of event do you want to hold?</strong></p>
  
-  <input type="radio" id="booking1" name="type" value="concert">
+  <input type="checkbox" id="booking1" name="type" value="concert">
   <label for="booking1"> Music Performance</label><br>
               
-    <input type="radio" name="type" value="yes" onclick="var input = document.getElementById('gallery'); if(this.checked){ input.disabled = false; input.focus();}else{input.disabled=true;}" /> Art Gallery Show
+    <input type="checkbox" name="type" value="yes" onclick="var input = document.getElementById('gallery'); if(this.checked){ input.disabled = false; input.focus();}else{input.disabled=true;}" /> Art Gallery Show
      <br><label for="gallery">Choose desired duration:</label>
   <select id="gallery" name="type_Gallery_Duration" disabled="disabled">
     <option value="day">1 day</option>
@@ -121,7 +121,7 @@
     <option value="longer">Longer</option>
   </select><br>
               
-    <input type="radio" name="type" value="yes" onclick="var input = document.getElementById('installation'); if(this.checked){ input.disabled = false; input.focus();}else{input.disabled=true;}" /> Art Installation
+    <input type="checkbox" name="type" value="yes" onclick="var input = document.getElementById('installation'); if(this.checked){ input.disabled = false; input.focus();}else{input.disabled=true;}" /> Art Installation
      <br><label for="installation">Choose desired duration:</label>
   <select id="installation" name="type_installation_Duration" disabled="disabled">
     <option value="day">1 day</option>
@@ -130,7 +130,7 @@
     <option value="longer">Longer</option>
   </select><br>
               
-    <input type="radio" name="type" value="yes" onclick="var input = document.getElementById('workshop'); if(this.checked){ input.disabled = false; input.focus();}else{input.disabled=true;}" /> Class or Workshop
+    <input type="checkbox" name="type" value="yes" onclick="var input = document.getElementById('workshop'); if(this.checked){ input.disabled = false; input.focus();}else{input.disabled=true;}" /> Class or Workshop
      <br><label for="workshop">Choose desired duration:</label>
   <select id="workshop" name="type_workshop_Duration" disabled="disabled">
     <option value="day">1 day</option>
@@ -139,14 +139,14 @@
     <option value="longer">Longer</option>
   </select><br>
               
-   <input type="radio" name="type" value="yes" onclick="var input = document.getElementById('social'); if(this.checked){ input.disabled = false; input.focus();}else{input.disabled=true;}" /> Social Gathering (music jams, film nights etc)
+   <input type="checkbox" name="type" value="yes" onclick="var input = document.getElementById('social'); if(this.checked){ input.disabled = false; input.focus();}else{input.disabled=true;}" /> Social Gathering (music jams, film nights etc)
      <br><label for="social">Choose desired frequency:</label>
   <select id="social" name="type_social_frequency" disabled="disabled">
     <option value="once">Once</option>
     <option value="weekly">Weekly</option>
     <option value="monthly">Monthly</option>
   </select><br>
-      
+
         <div><p><strong>What staff services do you need to support your event?</strong></p>
  
   <input type="checkbox" id="need1" name="Sound" value="sound">
@@ -191,6 +191,25 @@ window.addEventListener("load", function() {
 
 
 </script>
+
+      // the selector will match all input controls of type :checkbox
+// and attach a click event handler 
+$("input:checkbox").on('click', function() {
+  // in the handler, 'this' refers to the box clicked on
+  var $box = $(this);
+  if ($box.is(":checked")) {
+    // the name of the box is retrieved using the .attr() method
+    // as it is assumed and expected to be immutable
+    var group = "input:checkbox[name='" + $box.attr("name") + "']";
+    // the checked state of the group/box on the other hand will change
+    // and the current value is retrieved using .prop() method
+    $(group).prop("checked", false);
+    $box.prop("checked", true);
+  } else {
+    $box.prop("checked", false);
+  }
+});
+      
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
